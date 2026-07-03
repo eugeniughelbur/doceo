@@ -81,19 +81,109 @@ Restart your Claude Code session once so `/doceo` appears in the slash menu.
 
 First run asks one question (where to save lessons) and interviews you for 30 seconds to seed your profile. Config lives in `~/.doceo/config.json`, so the same skill on a second machine (say, your work laptop) keeps a completely separate memory.
 
-## Example prompts
+## 10 examples
 
-| You type | You get |
-|---|---|
-| `/doceo what is an LLM?` | Concept lesson with a next-word-prediction diagram and a phone-keyboard analogy |
-| `/doceo webhooks` | Concept lesson grounded in your own stack |
-| `/doceo https://github.com/fastify/fastify` | The core idea of a repo, not a file-by-file tour |
-| `/doceo src/services/billing/` | What this folder does and where it fits in the system |
-| `/doceo how to set up a reverse proxy` | Task lesson with baby steps and "done looks like" checks |
-| `/doceo` (bare, mid-conversation) | A lesson on the thing that just confused you |
+Real prompts, real use cases. Screenshots show the actual lesson each prompt produced.
 
-<!-- SCREENSHOT: terminal running /doceo -->
-<!-- ![running the /doceo command in Claude Code](docs/screenshots/doceo-command.png) -->
+### 1. Learn a concept from zero
+
+```
+/doceo what is an LLM?
+```
+
+You use AI every day but never understood what's under the hood. One screen later you can explain next-word prediction to a colleague.
+
+<!-- ![doceo lesson: what is an LLM, explained in one screen](docs/screenshots/example-01-llm.png) -->
+
+### 2. The concept every developer pretends to know
+
+```
+/doceo how does OAuth actually work
+```
+
+You've clicked "Sign in with Google" a thousand times and copy-pasted the config twice. Now you actually get the token dance.
+
+<!-- ![doceo lesson: OAuth flow explained with a diagram](docs/screenshots/example-02-oauth.png) -->
+
+### 3. Decide between two approaches
+
+```
+/doceo webhooks vs polling
+```
+
+You need to pick one for a feature today. The lesson gives you the picture, the trade-off, and which one fits your case.
+
+<!-- ![doceo lesson: webhooks vs polling comparison](docs/screenshots/example-03-webhooks.png) -->
+
+### 4. Understand a repo before adopting it
+
+```
+/doceo https://github.com/fastify/fastify
+```
+
+Somebody said "just use Fastify". Instead of reading the docs for an hour, you get the core idea and where it fits your stack.
+
+<!-- ![doceo lesson: what Fastify is and how it works](docs/screenshots/example-04-repo.png) -->
+
+### 5. The folder you inherited and fear
+
+```
+/doceo src/services/billing/
+```
+
+New codebase, unfamiliar module, and you have to touch it this sprint. The lesson maps what it does and how data flows through it.
+
+<!-- ![doceo lesson: unfamiliar codebase folder explained](docs/screenshots/example-05-folder.png) -->
+
+### 6. The config you copy-pasted but never understood
+
+```
+/doceo docker-compose.yml
+```
+
+It works, but you don't know why. One screen: what each block does and what breaks if you remove it.
+
+<!-- ![doceo lesson: docker-compose file explained line by line](docs/screenshots/example-06-config.png) -->
+
+### 7. A task broken into baby steps
+
+```
+/doceo how to set up a reverse proxy with nginx
+```
+
+Task lessons add 3-5 baby steps, each with "done looks like", so you always know if you're on track.
+
+<!-- ![doceo lesson: task with baby steps and done-looks-like checks](docs/screenshots/example-07-task.png) -->
+
+### 8. Theory made practical
+
+```
+/doceo the CAP theorem
+```
+
+Textbook theory, taught with an analogy from your world and the one sentence you'll actually remember in the design meeting.
+
+<!-- ![doceo lesson: CAP theorem with a real-world analogy](docs/screenshots/example-08-theory.png) -->
+
+### 9. Teach the error, not just the fix
+
+```
+/doceo this error: "CORS policy: No 'Access-Control-Allow-Origin' header"
+```
+
+Instead of pasting a fix you'll need again next month, you learn what the browser is actually protecting and why the header fixes it.
+
+<!-- ![doceo lesson: CORS error explained so it never confuses again](docs/screenshots/example-09-error.png) -->
+
+### 10. Bare /doceo, mid-conversation
+
+```
+/doceo
+```
+
+You're deep in a session and something Claude said confused you. Bare `/doceo` grabs the confusing thing from context and turns it into a lesson on the spot.
+
+<!-- ![doceo lesson: bare command teaching the current conversation topic](docs/screenshots/example-10-bare.png) -->
 
 ## Doceo vs. other learning tools
 
