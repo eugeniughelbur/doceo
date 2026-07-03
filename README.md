@@ -106,7 +106,7 @@ You use AI every day but never understood what's under the hood. One screen late
 
 You've clicked "Sign in with Google" a thousand times and copy-pasted the config twice. Now you actually get the token dance.
 
-<!-- ![doceo lesson: OAuth flow explained with a diagram](docs/screenshots/example-02-oauth.png) -->
+![doceo lesson: OAuth flow explained with a diagram](docs/screenshots/example-02-oauth.png)
 
 ### 3. Decide between two approaches
 
@@ -116,7 +116,7 @@ You've clicked "Sign in with Google" a thousand times and copy-pasted the config
 
 You need to pick one for a feature today. The lesson gives you the picture, the trade-off, and which one fits your case.
 
-<!-- ![doceo lesson: webhooks vs polling comparison](docs/screenshots/example-03-webhooks.png) -->
+![doceo lesson: webhooks vs polling comparison](docs/screenshots/example-03-webhooks.png)
 
 ### 4. Understand a repo before adopting it
 
@@ -126,7 +126,7 @@ You need to pick one for a feature today. The lesson gives you the picture, the 
 
 Somebody said "just use Fastify". Instead of reading the docs for an hour, you get the core idea and where it fits your stack.
 
-<!-- ![doceo lesson: what Fastify is and how it works](docs/screenshots/example-04-repo.png) -->
+![doceo lesson: what Fastify is and how it works](docs/screenshots/example-04-repo.png)
 
 ### 5. The folder you inherited and fear
 
@@ -136,7 +136,7 @@ Somebody said "just use Fastify". Instead of reading the docs for an hour, you g
 
 New codebase, unfamiliar module, and you have to touch it this sprint. The lesson maps what it does and how data flows through it.
 
-<!-- ![doceo lesson: unfamiliar codebase folder explained](docs/screenshots/example-05-folder.png) -->
+![doceo lesson: unfamiliar codebase folder explained](docs/screenshots/example-05-folder.png)
 
 ### 6. The config you copy-pasted but never understood
 
@@ -146,7 +146,7 @@ New codebase, unfamiliar module, and you have to touch it this sprint. The lesso
 
 It works, but you don't know why. One screen: what each block does and what breaks if you remove it.
 
-<!-- ![doceo lesson: docker-compose file explained line by line](docs/screenshots/example-06-config.png) -->
+![doceo lesson: docker-compose file explained line by line](docs/screenshots/example-06-config.png)
 
 ### 7. A task broken into baby steps
 
@@ -156,7 +156,7 @@ It works, but you don't know why. One screen: what each block does and what brea
 
 Task lessons add 3-5 baby steps, each with "done looks like", so you always know if you're on track.
 
-<!-- ![doceo lesson: task with baby steps and done-looks-like checks](docs/screenshots/example-07-task.png) -->
+![doceo lesson: task with baby steps and done-looks-like checks](docs/screenshots/example-07-task.png)
 
 ### 8. Theory made practical
 
@@ -166,7 +166,7 @@ Task lessons add 3-5 baby steps, each with "done looks like", so you always know
 
 Textbook theory, taught with an analogy from your world and the one sentence you'll actually remember in the design meeting.
 
-<!-- ![doceo lesson: CAP theorem with a real-world analogy](docs/screenshots/example-08-theory.png) -->
+![doceo lesson: CAP theorem with a real-world analogy](docs/screenshots/example-08-theory.png)
 
 ### 9. Teach the error, not just the fix
 
@@ -176,7 +176,7 @@ Textbook theory, taught with an analogy from your world and the one sentence you
 
 Instead of pasting a fix you'll need again next month, you learn what the browser is actually protecting and why the header fixes it.
 
-<!-- ![doceo lesson: CORS error explained so it never confuses again](docs/screenshots/example-09-error.png) -->
+![doceo lesson: CORS error explained so it never confuses again](docs/screenshots/example-09-error.png)
 
 ### 10. Bare /doceo, mid-conversation
 
@@ -186,7 +186,7 @@ Instead of pasting a fix you'll need again next month, you learn what the browse
 
 You're deep in a session and something Claude said confused you. Bare `/doceo` grabs the confusing thing from context and turns it into a lesson on the spot.
 
-<!-- ![doceo lesson: bare command teaching the current conversation topic](docs/screenshots/example-10-bare.png) -->
+![doceo lesson: bare command teaching the current conversation topic](docs/screenshots/example-10-bare.png)
 
 ## Doceo vs. other learning tools
 
