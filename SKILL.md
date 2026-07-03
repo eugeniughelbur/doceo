@@ -21,6 +21,7 @@ Core promise: **the learner should never have to reread.** If a lesson needs rer
 3. Read, in this order (skip what doesn't exist yet):
    - `memory_root/_learnings.md` — accumulated teaching rules from past feedback. **These override everything below.**
    - `memory_root/_profile.md` — who the learner is, what they know, how they like to be taught.
+   - `memory_root/_style.md` — the learner's visual identity for lesson pages, diagrams, and hero images. **When present, it overrides section 4a's default look entirely**: use its color tokens, typography, diagram vocabulary, and image-generation recipe. When absent, use the neutral defaults in 4a.
    - `memory_root/index.md` — one line per past lesson. Use it to know what can be assumed known and what to link.
    - The relevant `memory_root/maps/<domain>.md` if the topic belongs to an existing domain.
 
@@ -69,7 +70,7 @@ Hard rules:
 
 ### 4a. The HTML lesson page (what the user actually looks at)
 
-Render via the Artifact tool (load the `artifact-design` skill first if available). Requirements:
+Render via the Artifact tool (load the `artifact-design` skill first if available). If `memory_root/_style.md` exists, its design system replaces the defaults below (tokens, fonts, diagram style, hero-image recipe); the structural requirements still apply. Requirements:
 
 - **Fully self-contained: no CDN, no external requests.** Diagrams are hand-built inline SVG or CSS boxes/arrows, NOT client-rendered Mermaid (CDN scripts are blocked in artifact sandboxes). Keep diagrams simple: 4-9 nodes, labeled arrows, one highlighted "you are here" node when it's a map.
 - Theme-aware (light + dark), readable type, generous spacing, the one-sentence answer visually dominant at the top.
@@ -122,6 +123,7 @@ The markdown note carries the same content as the HTML page. Mermaid IS allowed 
 Seed files on first run:
 
 - `_profile.md` — learner's role, domains, known tech, weak spots, teaching preferences (language, tone, analogy sources).
+- `_style.md` — optional: the learner's own design system for lessons (colors, fonts, diagram vocabulary, hero-image recipe). Ask if they have a brand/design system to import; skip otherwise.
 - `_learnings.md` — starts with only the header and the standing rules: `One screen. One picture. One analogy. Plain words.`
 - `index.md` — empty list.
 
