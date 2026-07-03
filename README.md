@@ -1,8 +1,8 @@
-# doceo — the Claude Code skill that teaches you anything in one screen
+# doceo: the Claude Code skill that teaches you anything in one screen
 
 *doceo* (Latin): **"I teach."**
 
-An open-source **AI tutor skill for Claude Code**. Ask it anything you don't understand, a concept, a codebase, a document, a task, and instead of a wall of text you get a **one-screen visual lesson**: one plain-language answer, one diagram, one analogy, and a tiny self-quiz. Every lesson is saved to your notes, so the next lesson already knows what you learned. And it improves itself from your feedback.
+An open-source **AI tutor skill for Claude Code**. Point it at anything you don't understand and instead of a wall of text you get a **one-screen visual lesson**: one plain-language answer, one diagram, one analogy, and a tiny self-quiz. Every lesson is saved to your notes, so the next lesson already knows what you learned. And it improves itself from your feedback.
 
 ```
 /doceo what is an LLM?
@@ -14,7 +14,7 @@ An open-source **AI tutor skill for Claude Code**. Ask it anything you don't und
 
 ## The pain it solves
 
-You ask an AI to explain something new. It answers with 1,500 technically correct words. You read all of it, understand half of it, and remember none of it by tomorrow. Learning a new domain this way, a new job, a new stack, a new field, feels like being assigned a book per day.
+You ask an AI to explain something new. It answers with 1,500 technically correct words. You read all of it, understand half of it, and remember none of it by tomorrow. Learning a new domain this way feels like being assigned a book per day.
 
 Three things are broken in that workflow:
 
@@ -40,7 +40,7 @@ Every lesson has the same skeleton, capped at roughly one screen:
 
 ![doceo lesson page: one-screen visual lesson with hand-drawn diagram, analogy and self-quiz](docs/screenshots/lesson-page.png)
 
-You get two artifacts per lesson: a rendered HTML page to learn from, and a markdown note (with Mermaid diagrams) saved into your lessons folder. An Obsidian vault works beautifully as that folder, but any directory does.
+You get two artifacts per lesson: a rendered HTML page to learn from, and a markdown note (with Mermaid diagrams) saved into your lessons folder. An Obsidian vault is a natural fit for that folder, but any directory works.
 
 ## How it works
 
@@ -57,11 +57,11 @@ flowchart LR
 
 A small folder next to your lessons:
 
-- `_profile.md` — who you are, what you already know, how you like to be taught
-- `_learnings.md` — teaching rules distilled from your feedback; read at the start of every run
-- `_style.md` — optional: your own design system (colors, fonts, diagram vocabulary); when present, every lesson page renders in **your** brand
-- `index.md` — one line per lesson, so lesson 12 assumes lessons 1-11 and links back instead of re-explaining
-- `maps/<domain>.md` — one growing map per domain: everything you have learned, one picture
+- `_profile.md` - who you are, what you already know, how you like to be taught
+- `_learnings.md` - teaching rules distilled from your feedback; read at the start of every run
+- `_style.md` - optional: your own design system (colors, fonts, diagram vocabulary); when present, every lesson page renders in **your** brand
+- `index.md` - one line per lesson, so lesson 12 assumes lessons 1-11 and links back instead of re-explaining
+- `maps/<domain>.md` - one growing map per domain: everything you have learned, one picture
 
 ### The improvement loop
 
@@ -79,7 +79,7 @@ First run asks one question (where to save lessons) and interviews you for 30 se
 
 ## 10 examples
 
-Real prompts, real use cases. Screenshots show the actual lesson each prompt produced.
+Each screenshot is the lesson that exact prompt produced.
 
 ### 1. Learn a concept from zero
 
@@ -160,7 +160,7 @@ Task lessons add 3-5 baby steps, each with "done looks like", so you always know
 /doceo the CAP theorem
 ```
 
-Textbook theory, taught with an analogy from your world and the one sentence you'll actually remember in the design meeting.
+Textbook theory, taught with an analogy from your world and one sentence that survives until the design meeting.
 
 ![doceo lesson: CAP theorem with a real-world analogy](docs/screenshots/example-08-theory.png)
 
@@ -204,7 +204,7 @@ You're deep in a session and something Claude said confused you. Bare `/doceo` g
 <a href="https://theaioperator.io"><img src="https://img.shields.io/badge/Subscribe_on_Substack-FF6719?style=for-the-badge&logo=substack&logoColor=white" alt="Subscribe on Substack" /></a>
 <a href="https://github.com/eugeniughelbur"><img src="https://img.shields.io/badge/Follow_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Follow on GitHub" /></a>
 
-<em>More from the same stack: <a href="https://github.com/eugeniughelbur/obsidian-second-brain"><strong>obsidian-second-brain</strong></a> — the living second-brain vault doceo plugs into.</em>
+<em>More from the same stack: <a href="https://github.com/eugeniughelbur/obsidian-second-brain"><strong>obsidian-second-brain</strong></a>, the living second-brain vault doceo plugs into.</em>
 
 </td>
 </tr>
@@ -259,6 +259,4 @@ Every lesson ends with one feedback question. Your answers are logged, repeated 
 
 MIT. Built by [Eugeniu Ghelbur](https://theaioperator.io), an AI automation engineer shipping agents in production. More AI-builder tools and write-ups at [theaioperator.io](https://theaioperator.io).
 
----
-
-*Keywords: Claude Code skill, AI tutor, personal AI teacher, learn anything with AI, visual learning, one-screen lessons, Feynman technique, teachable artifacts, developer onboarding, second brain, Obsidian learning workflow, AI explanations too long, spaced learning with AI.*
+<!-- keywords: Claude Code skill, AI tutor, personal AI teacher, learn anything with AI, visual learning, one-screen lessons, Feynman technique, teachable artifacts, developer onboarding, second brain, Obsidian learning workflow, AI explanations too long, spaced learning with AI -->
