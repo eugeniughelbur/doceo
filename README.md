@@ -38,11 +38,7 @@ Every lesson has the same skeleton, capped at roughly one screen:
 | **Check yourself** | 2-3 quiz questions, answers hidden behind a click. The Feynman test. |
 | **Go deeper** | Optional links. Depth is opt-in, never forced. |
 
-<!-- SCREENSHOT: full lesson page (sepia sketchnote style) -->
-<!-- ![doceo lesson page: one-screen visual lesson with hand-drawn diagram, analogy and self-quiz](docs/screenshots/lesson-page.png) -->
-
-<!-- SCREENSHOT: the diagram close-up -->
-<!-- ![doceo lesson diagram: hand-drawn SVG flow with colored arrows](docs/screenshots/lesson-diagram.png) -->
+![doceo lesson page: one-screen visual lesson with hand-drawn diagram, analogy and self-quiz](docs/screenshots/lesson-page.png)
 
 You get two artifacts per lesson: a rendered HTML page to learn from, and a markdown note (with Mermaid diagrams) saved into your lessons folder. An Obsidian vault works beautifully as that folder, but any directory does.
 
