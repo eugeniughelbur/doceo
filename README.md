@@ -93,7 +93,10 @@ Real prompts, real use cases. Screenshots show the actual lesson each prompt pro
 
 You use AI every day but never understood what's under the hood. One screen later you can explain next-word prediction to a colleague.
 
-<!-- ![doceo lesson: what is an LLM, explained in one screen](docs/screenshots/example-01-llm.png) -->
+<p align="center">
+  <img src="docs/screenshots/example-01-llm-a.png" alt="doceo lesson: what is an LLM, answer and hand-drawn diagram" width="49%">
+  <img src="docs/screenshots/example-01-llm-b.png" alt="doceo lesson: analogy, where it fits, and self-quiz" width="49%">
+</p>
 
 ### 2. The concept every developer pretends to know
 
