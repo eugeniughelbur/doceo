@@ -32,6 +32,7 @@ You get a rendered HTML lesson page to learn from, plus a markdown copy saved to
 Doceo keeps a small learning memory next to your lessons:
 
 - `_profile.md` — who you are, what you already know, how you like to be taught
+- `_style.md` — optional: your own design system (colors, fonts, diagram style); when present, every lesson page renders in YOUR brand
 - `index.md` — every lesson, one line each
 - `maps/<domain>.md` — one growing map per domain: your whole territory, one picture
 - lessons that **build on each other** — lesson 12 assumes lessons 1–11, and links back instead of re-explaining
@@ -44,8 +45,10 @@ Your answer becomes feedback, repeated feedback becomes rules in `_learnings.md`
 ## Install
 
 ```bash
-git clone https://github.com/YOURNAME/doceo ~/.claude/skills/doceo
+git clone https://github.com/eugeniughelbur/doceo ~/.claude/skills/doceo
 ```
+
+Restart your Claude Code session once after installing so `/doceo` shows up in the slash menu.
 
 First run asks one question (where to save lessons) and interviews you for 30 seconds to seed your profile. Config lives in `~/.doceo/config.json`, so the same skill on your work machine keeps a completely separate memory.
 
