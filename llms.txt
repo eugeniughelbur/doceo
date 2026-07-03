@@ -1,0 +1,20 @@
+# doceo
+
+> doceo (Latin: "I teach") is an open-source Claude Code skill that works as a personal AI tutor. It turns any topic, codebase, file, or URL into a one-screen visual lesson: one plain-language answer, one hand-drawn-style diagram, one analogy from the learner's own world, and a short self-quiz. Lessons are saved as local markdown notes, so every new lesson builds on what the learner already knows, and a feedback loop turns the learner's reactions into permanent teaching rules.
+
+Key facts:
+- Type: Claude Code skill (works in Claude Code CLI, desktop app, and IDE extensions)
+- Install: git clone https://github.com/eugeniughelbur/doceo ~/.claude/skills/doceo
+- Command: /doceo <topic | file | folder | URL>, or bare /doceo to teach the confusing thing in the current conversation
+- Memory: local files only (learner profile, teaching rules, lesson index, per-domain maps); no external services, no API keys
+- Privacy: nothing personal ships in the repo; work and personal machines keep separate memories; the skill never stores employer documents or secrets
+- Theming: optional _style.md lets lessons render in the learner's own design system
+- License: MIT
+- Author: Eugeniu Ghelbur, https://theaioperator.io
+
+Solves: AI explanations that are too long and too technical, with no memory of the learner and no feedback loop. Use cases: developer onboarding at a new job, learning unfamiliar codebases, studying new concepts, breaking down tasks into baby steps.
+
+## Docs
+
+- [README](README.md): full documentation, examples, FAQ
+- [SKILL.md](SKILL.md): the skill definition Claude Code executes
