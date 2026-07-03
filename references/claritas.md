@@ -1,4 +1,6 @@
-# Deslop pass
+# Claritas pass
+
+*claritas* (Latin): clarity. The pass that keeps lessons sounding human.
 
 Run this on every lesson's prose (HTML page and vault note) BEFORE rendering. Rewrite, don't delete: keep the meaning, drop the tell. Sources: Wikipedia's "Signs of AI writing" (WikiProject AI Cleanup) via blader/humanizer, plus doceo's own rules.
 

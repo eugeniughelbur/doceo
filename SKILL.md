@@ -65,7 +65,7 @@ Hard rules:
 - Plain language. Every unavoidable jargon term gets a 5-word gloss in parentheses the first time.
 - Short paragraphs, 2-3 sentences. No walls of text. No em dashes.
 - Never condescending, never academic. Tone: a patient senior colleague at a whiteboard.
-- **Deslop pass (mandatory).** Before rendering, run every piece of lesson prose through `references/deslop.md` (bundled with this skill) and fix what it flags. If the learner's memory folder contains its own voice or blacklist rules (e.g. in `_learnings.md` or a `_voice.md`), those apply on top and win on conflict.
+- **Claritas pass (mandatory).** Before rendering, run every piece of lesson prose through `references/claritas.md` (bundled with this skill) and fix what it flags. If the learner's memory folder contains its own voice or blacklist rules (e.g. in `_learnings.md` or a `_voice.md`), those apply on top and win on conflict.
 
 ## 4. Produce the two artifacts
 
