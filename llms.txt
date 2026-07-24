@@ -6,6 +6,7 @@ Key facts:
 - Type: Claude Code skill (works in Claude Code CLI, desktop app, and IDE extensions)
 - Install: git clone https://github.com/eugeniughelbur/doceo ~/.claude/skills/doceo
 - Command: /doceo <topic | file | folder | URL>, or bare /doceo to teach the confusing thing in the current conversation
+- Review: /doceo review re-quizzes past lessons (weakest rating first, then longest unreviewed) and updates each lesson's rating
 - Memory: local files only (learner profile, teaching rules, lesson index, per-domain maps); no external services, no API keys
 - Privacy: nothing personal ships in the repo; work and personal machines keep separate memories; the skill never stores employer documents or secrets
 - Theming: optional _style.md lets lessons render in the learner's own design system

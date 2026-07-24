@@ -1,6 +1,6 @@
 ---
 name: doceo
-description: Turn anything the user wants to learn into a short, visual, plain-language teachable artifact (one HTML lesson page + a markdown lesson note), calibrated to what they already know and improving with every use. Use when the user runs /doceo, says "teach me X", "I don't understand X", "explain this simply", "make this teachable", or is clearly drowning in a too-technical explanation.
+description: Turn anything the user wants to learn into a short, visual, plain-language teachable artifact (one HTML lesson page + a markdown lesson note), calibrated to what they already know and improving with every use. Use when the user runs /doceo, says "teach me X", "I don't understand X", "explain this simply", "make this teachable", or is clearly drowning in a too-technical explanation. Also use for review: the user runs /doceo review or says "quiz me" / "review my lessons" to be re-quizzed on past lessons.
 ---
 
 # Doceo — "I teach" (Latin)
@@ -33,6 +33,7 @@ Core promise: **the learner should never have to reread.** If a lesson needs rer
 - **A topic** ("webhooks", "our billing data model") → research it: current conversation, project files, and web if needed.
 - **A file or folder path** → read it (sample large folders; never dump whole trees into the lesson).
 - **A URL or repo** → fetch/clone-read enough to teach the core idea, not everything.
+- **`review`** (`/doceo review`, "quiz me", "review my lessons") → no new lesson; run Review mode (section 7).
 
 Scope discipline: a lesson teaches ONE thing. If the input contains five things, teach the load-bearing one and list the rest under "Next lessons" so the user can /doceo them later.
 
@@ -126,6 +127,7 @@ Seed files on first run:
 - `_profile.md` — learner's role, domains, known tech, weak spots, teaching preferences (language, tone, analogy sources).
 - `_style.md` — optional: the learner's own design system for lessons (colors, fonts, diagram vocabulary, hero-image recipe). Ask if they have a brand/design system to import; skip otherwise.
 - `_learnings.md` — starts with only the header and the standing rules: `One screen. One picture. One analogy. Plain words.`
+- `_feedback.md` — empty log; filled by the loop in section 6 and reviews in section 7.
 - `index.md` — empty list.
 
 **Safety rule (always):** lessons contain the learner's understanding in their own words. Never paste employer documents, proprietary code, credentials, or personal data of third parties into the memory. Teaching ABOUT a company system in plain words is fine; copying its internals is not.
@@ -140,11 +142,24 @@ Then:
 
 1. Log the answer in `_feedback.md`: `- YYYY-MM-DD · <topic> · <verdict> · <any comment>`. Update the lesson note's `rating:` field.
 2. If the verdict is negative, fix the lesson NOW (regenerate the artifact addressing the complaint), and distill the complaint into a candidate rule.
-3. **Distillation:** when a pattern appears twice in `_feedback.md` (or the user states a preference outright), write it into `_learnings.md` as a short imperative rule with a date, e.g. `- 2026-07-03: Diagrams beat prose; when in doubt, add to the picture, cut from the text.` Prune rules that later feedback contradicts.
+3. **Distillation:** when a pattern appears twice in `_feedback.md` (or the user states a preference outright), write it into `_learnings.md` as a short imperative rule with a date, e.g. `- 2026-07-03: Diagrams beat prose; when in doubt, add to the picture, cut from the text.` Prune rules that later feedback contradicts. Review rows (verdict `passed`/`forgotten`, section 7) measure recall, not lesson quality; never distill them into teaching rules.
 4. Every 10th lesson, do a self-review: reread `_feedback.md`, rewrite `_learnings.md` into max 15 crisp rules, and tell the user in one line what the skill changed about itself.
 
 `_learnings.md` is read at the start of EVERY run and outranks this file's defaults. That is the loop: feedback → rules → better lessons.
 
-## 7. Report
+## 7. Review mode — re-quiz past lessons
 
-End every run with, at most: the artifact link, where the note was saved, one line on what this lesson assumed you already knew, and the single feedback question. Nothing else.
+Triggered by `/doceo review` or natural phrasings ("quiz me", "review my lessons"). A review session re-tests old lessons instead of creating a new one.
+
+1. **Pick up to 3 lessons.** Read `index.md` and lesson frontmatter. Order: worst `rating:` first (`forgotten` and negative verdicts, then `pending`, then `great`), ties broken by longest-unreviewed `last_review:` (a missing `last_review` counts as oldest).
+2. **No lessons yet?** Say so in one line and suggest `/doceo <topic>` for a first lesson. Stop.
+3. **Quiz one lesson at a time.** Re-ask that lesson's Check yourself questions, one per turn. Never reveal the stored answer before the learner answers. A lesson without a Check yourself section gets the explain-back only.
+4. **Explain-back.** Close each lesson with the Feynman test: "<topic> in one sentence?" Judge against the lesson's answer line; if the core idea is missing, show that line. The explain-back decides the verdict: landed = `passed`, core idea missing = `forgotten`. Quiz stumbles alone don't fail a lesson that explains back well.
+5. **Update memory after each lesson:** set `rating:` (`great` on a pass, `forgotten` on a fail) and `last_review: YYYY-MM-DD` in the note's frontmatter, then append to `_feedback.md` in section 6's format: `- YYYY-MM-DD · <topic> · <passed|forgotten> · review`. Overwriting an old quality verdict is fine; section 6 already fixed the lesson when that verdict landed, and the history stays in `_feedback.md`.
+6. **Close the session** with one line per lesson (topic + result). Failed lessons carry a weak rating, so they lead the next session. No schedules, no due dates.
+
+Review never rewrites lesson content. If a lesson keeps failing review, suggest re-learning it fresh with `/doceo <topic>`.
+
+## 8. Report
+
+End every lesson run with, at most: the artifact link, where the note was saved, one line on what this lesson assumed you already knew, and the single feedback question. Review runs end with section 7's session close instead. Nothing else.

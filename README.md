@@ -10,6 +10,7 @@ An open-source **AI tutor skill for Claude Code**. Point it at anything you don'
 /doceo https://github.com/some/repo
 /doceo src/services/billing/
 /doceo            <- bare: "teach me the confusing thing we're discussing right now"
+/doceo review     <- quiz yourself on past lessons, weakest first
 ```
 
 ## The pain it solves
@@ -248,6 +249,9 @@ Yes. Drop a `_style.md` with your colors, fonts, and diagram vocabulary into the
 
 **How does it get better over time?**
 Every lesson ends with one feedback question. Your answers are logged, repeated patterns become teaching rules, and every future lesson reads those rules first.
+
+**How do I review what I already learned?**
+Run `/doceo review`. It picks up to 3 past lessons (weakest rating first, then longest unreviewed), re-asks their self-quiz questions, and ends each with a one-sentence Feynman test. Results update each lesson's rating, so what you failed comes back first next time.
 
 ## Privacy by design
 
