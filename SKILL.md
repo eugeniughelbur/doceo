@@ -49,7 +49,7 @@ From `_profile.md` and `index.md` decide:
 Every lesson contains, in this order (the Core 4 first, always):
 
 1. **The answer** — one plain sentence at the top that resolves the confusion. If the learner reads only this line, they still leave smarter.
-2. **The picture** — exactly one diagram: boxes, arrows, flows, a "you are here" map. This is the heart of the lesson.
+2. **The picture** — exactly one diagram, in the kind the topic's shape calls for: a flow, a sequence, a state change, a "you are here" map, or a side-by-side compare. Pick and write it with `references/diagrams.md`. This is the heart of the lesson.
 3. **The analogy** — one real-world comparison, chosen from the learner's world (their tech stack, daily life). One, not three.
 4. **Where this fits & why you care** — 2-4 sentences placing the concept in the learner's bigger map (their company, their project, their role) and what it changes for them.
 
@@ -73,7 +73,8 @@ Hard rules:
 
 Render via the Artifact tool (load the `artifact-design` skill first if available). If `memory_root/_style.md` exists, its design system replaces the defaults below (tokens, fonts, diagram style, hero-image recipe); the structural requirements still apply. Requirements:
 
-- **Fully self-contained: no CDN, no external requests.** Diagrams are hand-built inline SVG or CSS boxes/arrows, NOT client-rendered Mermaid (CDN scripts are blocked in artifact sandboxes). Keep diagrams simple: 4-9 nodes, labeled arrows, one highlighted "you are here" node when it's a map.
+- **Fully self-contained: no CDN, no external requests.** Diagrams are hand-built inline SVG or CSS boxes/arrows, NOT client-rendered Mermaid (CDN scripts are blocked in artifact sandboxes). Draw the SVG from the lesson's Mermaid source, same nodes and labels, so the page and the note show the same picture. Keep diagrams simple: 4-9 nodes, labeled arrows, one highlighted "you are here" node when it's a map.
+- Under the picture, a closed `<details>` titled "Diagram as Mermaid" holds the exact source, HTML-escaped, so the learner can paste it into GitHub, Notion or their notes. It is plain text, so the no-CDN rule still holds.
 - Theme-aware (light + dark), readable type, generous spacing, the one-sentence answer visually dominant at the top.
 - Quiz answers behind `<details>` toggles.
 - Footer line: "Lesson N · <domain> · doceo" linking nothing.
@@ -99,7 +100,7 @@ rating: pending
 <the answer>
 
 ## Picture
-<the same diagram as a ```mermaid block — Obsidian renders Mermaid natively>
+<the lesson's Mermaid source, unchanged, in a ```mermaid block. Obsidian and GitHub render it natively>
 
 ## Analogy
 …

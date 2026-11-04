@@ -31,7 +31,7 @@ Every lesson has the same skeleton, capped at roughly one screen:
 | Part | What it gives you |
 |---|---|
 | **The answer** | One plain sentence at the top. Read only this and you still leave smarter. |
-| **The picture** | One diagram: boxes, arrows, a "you are here" map. Drawn as inline SVG, sketchnote style. |
+| **The picture** | One diagram in the shape the topic needs: a flow, a sequence, a state change, a "you are here" map, or a side-by-side compare. Drawn as inline SVG, sketchnote style, with its Mermaid source one click away. |
 | **The analogy** | One real-world comparison picked from *your* world (your stack, your daily life). |
 | **Where this fits** | Why this matters to you, in your project, in your role. |
 | **Baby steps** | When the topic is a task: 3-5 steps, each with "done looks like". |
@@ -239,6 +239,9 @@ Everything lives in local files on your machine, in a folder you choose. The ski
 
 **Do I need Obsidian?**
 No. Any folder works. Obsidian is a nice fit because the markdown lessons use Mermaid diagrams and wiki-links, which Obsidian renders natively.
+
+**Does it use Mermaid diagrams?**
+Yes. Every lesson's picture starts as Mermaid. The markdown note embeds it, so Obsidian and GitHub render it. The HTML page redraws it as inline SVG, because artifact sandboxes block the Mermaid script, and keeps the source under the picture so you can copy it.
 
 **What do I need to run it?**
 Claude Code (CLI, desktop, or IDE extension). No API keys, no external services, no dependencies.
