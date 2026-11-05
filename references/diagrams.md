@@ -36,6 +36,15 @@ Obsidian, GitHub and Notion all render Mermaid, but they break on the same few t
 - In a sequence, keep `;` and `#` out of message text.
 - For "you are here" on a map, add `classDef here stroke-width:3px` and tag the node with `:::here`.
 
+## Make it fit the note
+
+Obsidian draws flowcharts and sequences at full size and cuts off anything wider than the note, about 700px. A 4-party OAuth sequence came out 946px wide and lost its fourth party. Start the block with one line that shrinks the diagram to fit:
+
+- Sequence: `%%{init: {"sequence": {"useMaxWidth": true, "actorMargin": 20}}}%%`
+- Flow, map and compare: `%%{init: {"flowchart": {"useMaxWidth": true}}}%%`
+
+The line is part of the source, so the note and the page's `<details>` copy both carry it. State diagrams already fit and need no line.
+
 ## Show the source on the page
 
 Under the picture on the HTML page, add a closed `<details>` with the summary "Diagram as Mermaid". Inside it, put the exact source in `<pre><code>`, HTML-escaped. The learner can paste it into GitHub, Notion or their own notes. It is plain text, so nothing loads from the network.
